@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.5'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.3.1'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+//    implementation group: 'org.junit', name: 'junit4-engine', version: '5.0.0-ALPHA'
+    testCompile 'io.rest-assured:rest-assured:3.3.0'
+    testImplementation group: 'com.tngtech.java', name: 'junit-dataprovider', version: '1.13.1'
+}
+
+test {
+    useJUnitPlatform()
+}
